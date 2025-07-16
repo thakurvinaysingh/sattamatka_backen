@@ -19,7 +19,7 @@ const app = express();
 dotenv.config();
 connectDB();
 app.use(cors({
-  origin: ["http://localhost:3003", "http://localhost:3000","http://localhost:3001","http://localhost:3002"],
+  origin: ["https://matka.dailysattaresult.co","http://localhost:3003", "http://localhost:3000","http://localhost:3001","http://localhost:3002"],
   credentials: true,
 }));
 
@@ -46,5 +46,5 @@ app.get('/', (req, res) => {
 
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
